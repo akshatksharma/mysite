@@ -5,6 +5,11 @@ $bg-secondary: #e4e4e4;
 
 $speed: 600ms;
 
+#tsparticles {
+  position: absolute;
+  z-index: -1;
+}
+
 .dark {
   $text-primary: #b6b6b6;
   $text-secondary: #ececec;
