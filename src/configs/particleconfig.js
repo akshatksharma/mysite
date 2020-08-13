@@ -104,7 +104,7 @@ export default {
         mode: "bounce",
       },
       color: {
-        value: "#a51417",
+        value: "#73b4ff",
         animation: {
           enable: false,
           speed: 10,
@@ -114,7 +114,7 @@ export default {
       links: {
         blink: false,
         color: {
-          value: "#a51417",
+          value: "#73b4ff",
         },
         consent: false,
         distance: 100,
