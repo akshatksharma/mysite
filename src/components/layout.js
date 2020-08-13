@@ -51,14 +51,13 @@ const Layout = ({ children, isHome }) => {
       <footer className="footer" id="contact">
         <div className="content">
           <h2>
-            If you'd like to work together, or just talk, feel free to email me
+            If you'd like to work together, or just talk, feel free to email me{" "}
             <a
               className="link"
               href="mailto:akshatksharma@wustl.edu"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {" "}
               here.
             </a>
           </h2>

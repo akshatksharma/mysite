@@ -8,7 +8,6 @@ import Particles from "react-tsparticles"
 import config from "../configs/particleconfig"
 
 const Home = () => {
-  console.log(config.config)
   return (
     <Layout isHome={true}>
       <SEO title="Home" />
@@ -62,60 +61,46 @@ const Home = () => {
             or catching up on my videogame backlog.
           </p>
         </div>
-
         {/* <h2 className="subtitle">Skills</h2> */}
       </section>
       <section className="page" id="projects">
         <div className="header">
           <h1 className="title">Projects</h1>
-          <Link to="/projects" className="actionButton">
+          {/* <Link to="/projects" className="actionButton">
             See All
-          </Link>
+          </Link> */}
         </div>
         <div className="projectList">
           <Link to="/grounded" className="projectBox" id="grounded">
             <div className="graphic"></div>
             <div className="info">
               <h2 className="projectTitle">Grounded</h2>
-              <p>Lorum Ipsum</p>
+              <p>Document your stories during the COVID-19 pandemic.</p>
             </div>
           </Link>
           <Link to="/mazeviz" className="projectBox" id="mazeviz">
             <div className="graphic"></div>
             <div className="info">
               <h2 className="projectTitle">MazeViz</h2>
-              <p>Lorum Ipsum</p>
+              <p>Create beautiful mazes and solve them.</p>
             </div>
           </Link>
           <Link to="/justacal" className="projectBox" id="sunshine">
             <div className="graphic"></div>
             <div className="info">
               <h2 className="projectTitle">Just a cal</h2>
-              <p>Lorum Ipsum</p>
+              <p>Google calendar clone with event grouping features.</p>
             </div>
           </Link>
           <Link to="/postup" className="projectBox" id="postup">
             <div className="graphic"></div>
             <div className="info">
               <h2 className="projectTitle">Postup</h2>
-              <p>Lorum Ipsum</p>
+              <p>Reddit clone with inline replies and editing.</p>
             </div>
           </Link>
         </div>
       </section>
-      {/* <section className="page" >
-      <h1 className="title">Contact</h1>
-      <form
-        method="post"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        name="contact"
-      >
-        <label>
-          Your Name: <input type="text" name="name" />
-        </label>
-      </form>
-    </section> */}
     </Layout>
   )
 }

@@ -14,22 +14,37 @@ const Justacal = () => (
       </header>
       <section className="content">
         <div className="mainText">
-          <h2 className="subtitle">What it is</h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-          <h2 className="subtitle">How</h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <h2 className="subtitle">What it is</h2>A fullstack application that
+          imitates Google Calendar. Users can authenticate, add events, perform
+          CRUD operations, and categorize them based on self-made, color-coded
+          tags. User data is communicated across the frontend and backend
+          through JSON. <br /> <br /> This project was guided by WashU's CSE330
+          course. However, I wanted to challenge myself by going beyond the
+          project requirements. I implemented new features, such event tagging,
+          and prioritized the site's UI and UX.
+          <h2 className="subtitle">What I did</h2>
+          <ul className="tasks">
+            <li>
+              Used MySQL to make a relational database of users, calendar
+              events, and tags.
+            </li>
+            <li>
+              Optimized event lookup time by restructuring JSON data to have
+              each event’s data keyed by its date
+            </li>
+            <li>
+              Supported authentication by storing usernames and hashed+salted
+              passwords in a mySQL database on AWS EC2.
+            </li>
+            <li>
+              Defended against CSRF, XSS, and SQL Injections via user token
+              checks, escaped output, and prepared queries
+            </li>
+            <li>
+              Prioritized accessibility with semantic html, keyboard support,
+              and appropriate ARIA tags.
+            </li>
+          </ul>
         </div>
         <aside className="sideBar">
           <div className="links">
@@ -48,11 +63,11 @@ const Justacal = () => (
           </div>
           <div className="stack">
             <h2 className="subheading">Stack</h2>
-            <p>Lorem ipsum dolor sit amet</p>
+            <p>Javascript, PHP, MySQL, Apache, AWS</p>
           </div>
           <div className="date">
             <h2 className="subheading">Date</h2>
-            <p>Lorem ipsum dolor sit amet</p>
+            <p>July 2020</p>
           </div>
         </aside>
       </section>
