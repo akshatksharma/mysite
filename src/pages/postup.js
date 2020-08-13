@@ -28,11 +28,11 @@ const Postup = () => (
             </li>
             <li>
               Supported full, color-coded comment threads for each post by
-              storing parent commentid in mySQL table
+              storing parent commentid in MySQL table
             </li>
             <li>
               Supported user authentication by storing usernames and
-              hashed+salted passwords in a mySQL database.
+              hashed+salted passwords in a MySQL database.
             </li>
             <li>
               Defended against CSRF, XSS, and SQL Injections via user token

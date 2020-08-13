@@ -34,7 +34,7 @@ const Justacal = () => (
             </li>
             <li>
               Supported authentication by storing usernames and hashed+salted
-              passwords in a mySQL database on AWS EC2.
+              passwords in a MySQL database on AWS EC2.
             </li>
             <li>
               Defended against CSRF, XSS, and SQL Injections via user token
