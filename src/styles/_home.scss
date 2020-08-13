@@ -1,6 +1,8 @@
 @import "global.scss";
 
 #home.page {
+  pointer-events: none;
+  z-index: 2;
   display: grid;
   grid-template-rows: repeat(3, 33vh);
 
@@ -25,6 +27,8 @@
 }
 
 #about.page {
+  pointer-events: none;
+  z-index: 2;
   min-height: 100%;
 
   .text {
@@ -67,7 +71,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1500px) {
       .actionButton {
         margin-right: 2rem;
       }

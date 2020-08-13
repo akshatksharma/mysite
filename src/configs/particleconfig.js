@@ -156,7 +156,7 @@ export default {
         },
         outMode: "out",
         random: false,
-        speed: 2,
+        speed: 1,
         straight: false,
         trail: {
           enable: false,

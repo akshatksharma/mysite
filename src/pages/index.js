@@ -16,7 +16,7 @@ const Home = () => {
         id="tsparticles"
         options={config.config}
         width="100vw"
-        height="100vh"
+        height="125vh"
       />
       <section className="page" id="home">
         <div className="header">
