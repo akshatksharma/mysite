@@ -26,7 +26,7 @@ const Grounded = () => (
           The site is currently down,
           as we are in the process of scaling our backend in preparation for a
           second, more expanded phase of submissions. In the meantime, I have
-          linked a copy of the frontend in the meantime.
+          linked a copy of the frontend.
           <h2 className="subtitle">What I did</h2>
           <ul className="tasks">
             <li>
