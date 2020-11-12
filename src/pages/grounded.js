@@ -20,7 +20,10 @@ const Grounded = () => (
           have found new meaning in the physical spaces and objects around them
           while in quanatine. Each submission consists of an image and a story,
           which can be recorded or typed. Built in collaboration with Design for
-          America, I led the site's frontend work.
+          America, I led the site's frontend work. The site is currently down,
+          as we are in the process of scaling our backend in preparation for a
+          second, more expanded phase of submissions. In the meantime, I have
+          linked a copy of the frontend in the meantime.
           <h2 className="subtitle">What I did</h2>
           <ul className="tasks">
             <li>
@@ -44,7 +47,7 @@ const Grounded = () => (
         <aside className="sideBar">
           <div className="links">
             <a
-              href="https://groundedarchive.com/"
+              href="https://grounded-archive-frontend.netlify.app/"
               className="siteLink actionButton"
             >
               Link
