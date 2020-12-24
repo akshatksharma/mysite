@@ -1,3 +1,3 @@
 # My site v1
 
-## v2 on the horizons soon : )
+v2 on the horizons soon : )
