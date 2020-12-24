@@ -2,7 +2,9 @@
 
 Made with Gatsby.js and SASS
 
-v2 on the horizons soon : )
+v2 on the horizon : )
+
+### Todo
 - [ ] Dark mode + different themes
 - [ ] Adding UI / UX design projects
 - [ ] Updated style on projects section
