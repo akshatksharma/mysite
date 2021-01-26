@@ -71,9 +71,7 @@ const Layout = ({ children, isHome }) => {
             <a href="https://github.com/akshatksharma">
               <LogoGithub size="32" />
             </a>
-            {/* <a href=" " target="_blank" rel="noopener" noreferrer>
-
-            </a> */}
+     
           </div>
         </div>
       </footer>

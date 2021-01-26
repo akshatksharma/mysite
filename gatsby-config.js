@@ -7,21 +7,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-smoothscroll`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: "Noto Sans JP",
-            variants: [`400`, `500`, `700`],
-          },
-          {
-            family: "Open Sans",
-            variants: [`400`, `700`],
-          },
-        ],
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
