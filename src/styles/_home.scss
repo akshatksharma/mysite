@@ -1,6 +1,6 @@
 @import "global.scss";
 
-#home.page {
+#home.sectionContent {
   pointer-events: none;
   z-index: 2;
   display: grid;
@@ -9,7 +9,7 @@
   .header {
     grid-row: 2 / 3;
   }
-  
+
   .subtitle {
     font-weight: 500;
 
@@ -28,7 +28,7 @@
   }
 }
 
-#about.page {
+#about.sectionContent {
   pointer-events: none;
   z-index: 2;
   min-height: 100%;
@@ -65,7 +65,7 @@
   }
 }
 
-#projects.page {
+#projects.sectionContent {
   width: 100%;
 
   .header {
@@ -89,7 +89,7 @@
         height: 300px;
       }
 
-      border: 1px solid $bg-secondary;
+      border: 1px solid var(--bg-seconday);
       border-radius: 10px;
       padding: 25px;
       margin-bottom: 20px;
@@ -109,6 +109,7 @@
 
       &#grounded {
         background: #f6c36b;
+        color: #000000;
       }
       &#mazeviz {
         background: #20233b;
@@ -118,8 +119,9 @@
         background: #e95428;
         color: #fdfdfd;
       }
-      &#sunshine {
+      &#justacal {
         background: #ebf4ff;
+        color: #000;
       }
 
       &:hover {

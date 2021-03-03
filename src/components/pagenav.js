@@ -1,11 +1,15 @@
+import React, { useState, useEffect, useContext } from "react"
+import {ThemeContext} from "./themeContext"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import React, { useState, useEffect } from "react"
+import ClientOnly from "./clientOnly"
 import { Home } from "@styled-icons/ionicons-outline"
 
 const Pagenav = ({ siteTitle }) => {
   const [scrolling, setScrolling] = useState(false)
   const [scrollTop, setScrollTop] = useState(0)
+
+  const { colorTheme, setColorTheme } = useContext(ThemeContext)
 
   useEffect(() => {
     function onScroll() {

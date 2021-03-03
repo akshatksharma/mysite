@@ -1,23 +1,27 @@
-import React from "react"
+import React, { useContext } from "react"
+import SEO from "../components/seo"
+import { ThemeContext } from "../components/themeContext"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
-import SEO from "../components/seo"
-import "../styles/_home.scss"
-import profile from "../images/profile.jpg"
 import Particles from "react-tsparticles"
 import config from "../configs/particleconfig"
+import "../styles/_home.scss"
+import profile from "../images/circleface.png"
 
 const Home = () => {
+  const { colorTheme } = useContext(ThemeContext)
+
   return (
     <Layout isHome={true}>
       <SEO title="Home" />
       <Particles
         id="tsparticles"
-        options={config.config}
+        options={config.light}
         width="100vw"
         height="125vh"
+        canvasClassName="particles"
       />
-      <section className="page" id="home">
+      <section className="sectionContent" id="home">
         <div className="header">
           <h1 className="title">
             Hello, <br /> I'm Akshat Sharma.
@@ -30,12 +34,12 @@ const Home = () => {
           </h2>
         </div>
       </section>
-      <section className="page" id="about">
+      <section className="sectionContent" id="about">
         <h1 className="title">About me</h1>
         <div className="content">
           <div className="profile">
             <img
-              width="400"
+              width="300"
               src={profile}
               alt="A profile headshot of Akshat Sharma"
             />
@@ -63,7 +67,7 @@ const Home = () => {
         </div>
         {/* <h2 className="subtitle">Skills</h2> */}
       </section>
-      <section className="page" id="projects">
+      <section className="sectionContent" id="projects">
         <div className="header">
           <h1 className="title">Projects</h1>
           {/* <Link to="/projects" className="actionButton">
@@ -85,7 +89,7 @@ const Home = () => {
               <p>Create beautiful mazes and solve them.</p>
             </div>
           </Link>
-          <Link to="/justacal" className="projectBox" id="sunshine">
+          <Link to="/justacal" className="projectBox" id="justacal">
             <div className="graphic"></div>
             <div className="info">
               <h2 className="projectTitle">Just a cal</h2>
