@@ -1,10 +1,11 @@
 import React, { useContext } from "react"
 import SEO from "../components/seo"
-import { ThemeContext } from "../components/themeContext"
-import Layout from "../components/layout"
 import { Link } from "gatsby"
 import Particles from "react-tsparticles"
 import config from "../configs/particleconfig"
+import { ThemeContext } from "../components/themeContext"
+import Layout from "../components/layout"
+import ColorToggle from "../components/colorToggle"
 import "../styles/_home.scss"
 import profile from "../images/circleface.png"
 
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <Layout isHome={true}>
       <SEO title="Home" />
+      <ColorToggle />
       <Particles
         id="tsparticles"
         options={config.light}

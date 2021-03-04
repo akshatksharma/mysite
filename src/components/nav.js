@@ -31,15 +31,7 @@ const Nav = ({ siteTitle }) => {
     }
   }, [colorTheme])
 
-  const toggleColor = () => {
-    if (isChecked) {
-      setColorTheme("light")
-      setIsChecked(false)
-    } else {
-      setColorTheme("dark")
-      setIsChecked(true)
-    }
-  }
+
 
   return (
     <nav className={scrolling ? "navBar hidden" : "navBar"}>
@@ -68,12 +60,6 @@ const Nav = ({ siteTitle }) => {
             <span className="linkText">Contact</span>
           </div>
         </button>
-        <ClientOnly>
-          <div className="navItem toggle">
-            <p>Dark?</p>
-            <input type="checkbox" onChange={toggleColor} checked={isChecked} />
-          </div>
-        </ClientOnly>
       </div>
     </nav>
   )

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react"
-import {ThemeContext} from "./themeContext"
+import { ThemeContext } from "./themeContext"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import ClientOnly from "./clientOnly"

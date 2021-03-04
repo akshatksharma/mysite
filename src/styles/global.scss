@@ -2,9 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;700&display=swap");
 $speed: 600ms;
 
-#tsparticles {
-  position: absolute;
-}
+// generic styles
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -29,16 +27,6 @@ body {
   --text-secondary: #35535c;
   --bg-primary: #fdf6e3;
   --bg-secondary: #f5e5b8;
-}
-
-#tsparticles {
-  width: 100%;
-}
-
-.particles {
-  width: 100% !important;
-  background-color: var(--bg-primary) !important;
-  transition: all $speed ease;
 }
 
 .title {
@@ -70,6 +58,19 @@ body {
   }
 }
 
+// specifc styles
+
+#tsparticles {
+  width: 100%;
+  position: absolute;
+}
+
+.particles {
+  width: 100% !important;
+  background-color: var(--bg-primary) !important;
+  transition: all $speed ease;
+}
+
 .page {
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -86,6 +87,15 @@ body {
       margin-left: 5rem;
     }
   }
+}
+
+.colorToggle {
+  z-index: 11;
+  transform: rotate(40deg);
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .navBar {
