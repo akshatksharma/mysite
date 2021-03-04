@@ -1,4 +1,4 @@
-import React from "React"
+import React from "react"
 import { ThemeProvider } from "./src/components/themeContext"
 import COLORS from "./src/configs/colors"
 
