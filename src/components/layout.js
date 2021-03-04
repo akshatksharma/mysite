@@ -6,7 +6,7 @@
  */
 
 import React, { useContext } from "react"
-import { ThemeContext } from "../components/themeContext"
+import { ThemeContext } from "./themeContext"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import {

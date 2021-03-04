@@ -1,4 +1,5 @@
 import React from "React"
+import { ThemeProvider } from "./src/components/themeContext"
 import COLORS from "./src/configs/colors"
 
 const getInitialColorMode = () => {
@@ -73,3 +74,6 @@ const MagicScriptTag = () => {
 export const onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents(<MagicScriptTag />)
 }
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+)

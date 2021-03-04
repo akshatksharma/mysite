@@ -1,16 +1,16 @@
-import React, { useContext } from "react"
+import React from "react"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
 import Particles from "react-tsparticles"
 import config from "../configs/particleconfig"
-import { ThemeContext } from "../components/themeContext"
+// import { ThemeContext } from "../components/themeContext"
 import Layout from "../components/layout"
 import ColorToggle from "../components/colorToggle"
 import "../styles/_home.scss"
 import profile from "../images/circleface.png"
 
 const Home = () => {
-  const { colorTheme } = useContext(ThemeContext)
+  // const { colorTheme } = useContext(ThemeContext)
 
   return (
     <Layout isHome={true}>

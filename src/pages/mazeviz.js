@@ -9,7 +9,7 @@ const Mazeviz = () => (
   <Layout isHome={false}>
     <SEO title="Grounded" />
     <main className="projectPage">
-      <header className="titleHeader" style={{ color: "#20233b" }}>
+      <header className="titleHeader" style={{ color: "#444c88" }}>
         <h1 className="title">MazeViz</h1>
       </header>
       <section className="content">
@@ -19,8 +19,8 @@ const Mazeviz = () => (
           Javascript, Graph search algorithms, and visualization. I enjoy
           learning with visuals, so I wanted to make concepts in class come to
           life in an easy to use and informative site. As a TA for my school's
-          data structures/algorithms class, I used this site to make
-          these algorithms 'click' for the students I teach as well.
+          data structures/algorithms class, I used this site to make these
+          algorithms 'click' for the students I teach as well.
           <h2 className="subtitle">What I did</h2>
           <ul className="tasks">
             <li>

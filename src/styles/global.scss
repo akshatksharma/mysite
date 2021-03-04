@@ -4,6 +4,13 @@ $speed: 600ms;
 
 // generic styles
 
+:root,
+html,
+body,
+#___gatsby {
+  background: var(--bg-primary);
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }

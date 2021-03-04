@@ -25,6 +25,7 @@ const ColorToggle = () => {
       opacity: 0,
       color: "white",
       fill: "white",
+      stroke: "white",
     },
     light: {
       r: 10,
@@ -34,21 +35,22 @@ const ColorToggle = () => {
       opacity: 1,
       color: "black",
       fill: "black",
+      stroke: "black",
     },
     springConfig: { mass: 4, tension: 250, friction: 35 },
   }
 
   const getProperties = () => {
-    console.log(properties.light)
-    if (colorTheme == "light") return properties.light
-    if (colorTheme == "dark") return properties.dark
+    if (colorTheme === "light") return properties.light
+    if (colorTheme === "dark") return properties.dark
     else return properties.light
   }
 
-  const { r, transform, cx, cy, opacity, color, fill } = getProperties()
+  const { r, transform, cx, cy, opacity, color, fill, stroke } = getProperties()
 
   const svgContainerProps = useSpring({
     transform,
+    stroke,
     config: properties.springConfig,
   })
   const centerCircleProps = useSpring({
@@ -65,6 +67,8 @@ const ColorToggle = () => {
   })
   const linesProps = useSpring({
     opacity,
+    color,
+    stroke,
     config: properties.springConfig,
   })
 
@@ -79,7 +83,6 @@ const ColorToggle = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      stroke="currentColor"
       onClick={handleColorChange}
       style={{
         ...svgContainerProps,
@@ -96,7 +99,7 @@ const ColorToggle = () => {
         style={centerCircleProps}
         mask="url(#myMask2)"
       />
-      <animated.g stroke="currentColor" style={linesProps}>
+      <animated.g stroke="currentcolor" style={linesProps}>
         <line x1="24" y1="2" x2="24" y2="6" />
         <line x1="24" y1="42" x2="24" y2="46" />
         <line x1="8.44" y1="8.44" x2="11.28" y2="11.28" />

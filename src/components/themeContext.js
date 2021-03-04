@@ -11,6 +11,8 @@ export const ThemeProvider = ({ children }) => {
     const initialColorValue = root.style.getPropertyValue(
       "--initial-color-mode"
     )
+
+    console.log(initialColorValue)
     rawSetColorTheme(initialColorValue)
   }, [])
 
