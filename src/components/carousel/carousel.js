@@ -1,12 +1,16 @@
 import React, { createRef } from "react"
-import "./carousel.css"
+import "./_carousel.scss"
 
 const Carousel = ({ count, children }) => {
   const target = createRef()
 
   return (
-    <div className="">
-      <div ref={target}>{children}</div>
+    <div className="mainContainer">
+      <div className="carouselContainer" ref={target}>
+        {children}
+      </div>
     </div>
   )
 }
+
+export default Carousel
