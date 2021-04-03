@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
     title: `Akshat's Personal Page`,
@@ -6,23 +8,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-root-import",
+      options: {
+        src: path.join(__dirname, "src"),
+        pages: path.join(__dirname, "src/pages"),
+        components: path.join(__dirname, "src/components"),
+        styles: path.join(__dirname, "src/styles"),
+        configs: path.join(__dirname, "src/configs"),
+        images: path.join(__dirname, "src/images"),
+      },
+    },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-preload-fonts`,
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: "Noto Sans JP",
-    //         variants: [`400`, `500`, `700`],
-    //       },
-    //       {
-    //         family: "Open Sans",
-    //         variants: [`400`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { useSpring, animated } from "react-spring"
 import { ThemeContext } from "./themeContext"
-import ClientOnly from "./clientOnly"
+import ClientOnly from "../clientOnly"
 
 const ColorToggle = () => {
   const [isChecked, setIsChecked] = useState(false)

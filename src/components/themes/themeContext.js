@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react"
-import COLORS from "../configs/colors"
+import COLORS from "configs/colors"
 
 export const ThemeContext = createContext()
 

@@ -1,9 +1,9 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "components/layout/layout"
+import SEO from "components/seo"
 
-import "../styles/_page.scss"
+import "styles/_page.scss"
 
 const Grounded = () => (
   <Layout isHome={false}>
@@ -20,13 +20,12 @@ const Grounded = () => (
           have found new meaning in the physical spaces and objects around them
           while in quanatine. Each submission consists of an image and a story,
           which can be recorded or typed. Built in collaboration with Design for
-          America, I led the site's frontend work. 
-          <br/>
-          <br/>
-          The site is currently down,
-          as we are in the process of scaling our backend in preparation for a
-          second, more expanded phase of submissions. In the meantime, I have
-          linked a copy of the frontend.
+          America, I led the site's frontend work.
+          <br />
+          <br />
+          The site is currently down, as we are in the process of scaling our
+          backend in preparation for a second, more expanded phase of
+          submissions. In the meantime, I have linked a copy of the frontend.
           <h2 className="subtitle">What I did</h2>
           <ul className="tasks">
             <li>

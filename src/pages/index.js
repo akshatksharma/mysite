@@ -1,15 +1,15 @@
 import React from "react"
-import SEO from "../components/seo"
+import SEO from "components/seo"
 import { Link } from "gatsby"
 import Particles from "react-tsparticles"
-import config from "../configs/particleconfig"
+import config from "configs/particleconfig"
 
-import Layout from "../components/layout"
-import ColorToggle from "../components/colorToggle"
-import Carousel from "../components/carousel/carousel"
+import Layout from "components/layout/layout"
+import ColorToggle from "components/themes/colorToggle"
+import Carousel from "components/carousel/carousel"
 
-import "../styles/_home.scss"
-import profile from "../images/circleface.png"
+import "styles/_home.scss"
+import profile from "images/circleface.png"
 
 const Home = () => {
   return (

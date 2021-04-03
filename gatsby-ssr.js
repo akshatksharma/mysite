@@ -1,6 +1,6 @@
 import React from "react"
-import { ThemeProvider } from "./src/components/themeContext"
-import COLORS from "./src/configs/colors"
+import { ThemeProvider } from "components/themes/themeContext"
+import COLORS from "configs/colors"
 
 const getInitialColorMode = () => {
   const persistedColorPreference = window.localStorage.getItem("color-mode")

@@ -6,7 +6,6 @@
  */
 
 import React, { useContext } from "react"
-import { ThemeContext } from "./themeContext"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import {
@@ -14,12 +13,14 @@ import {
   LogoGithub,
   LogoLinkedin,
 } from "@styled-icons/ionicons-solid"
+import { ThemeContext } from "components/themes/themeContext"
 
-import Nav from "./nav"
-import Pagenav from "././pagenav"
-import "../styles/_resets.scss"
+import Nav from "components/nav/nav"
+import Pagenav from "components/nav/pagenav"
+
+import "styles/_resets.scss"
+import "styles/global.scss"
 import "normalize.css"
-import "../styles/global.scss"
 
 const Layout = ({ children, isHome }) => {
   const data = useStaticQuery(graphql`
