@@ -67,11 +67,28 @@
 
 #projects.sectionContent {
   width: 100%;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    & {
+      width: calc(100% - 5rem);
+      // margin-left: 15rem;
+    }
+  }
 
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: 640px) {
+      position: relative;
+      width: 85%;
+      left: 15%;
+    }
 
     @media (min-width: 1500px) {
       .actionButton {
@@ -87,59 +104,76 @@
       display: none;
     }
 
-    .project {
-      width: 75vw;
-      margin-right: 1.5rem;
+    @media (min-width: 640px) {
+      position: relative;
+      width: 85%;
+      left: 15%;
     }
 
-    .projectList {
-      .projectBox {
-        width: 100%;
-        height: 150px;
+    .project {
+      margin-right: 1.5rem;
 
-        @media (min-width: 768px) {
-          height: 300px;
-        }
+      @media (min-width: 768px) {
+        margin-right: 3rem;
+      }
 
-        border: 1px solid var(--bg-seconday);
-        border-radius: 10px;
-        padding: 25px;
-        margin-bottom: 1rem;
+      .projectList {
+        .projectBox {
+          width: 100%;
+          height: 150px;
 
-        display: grid;
-        grid-template-rows: 1fr 100px;
-
-        transition: all 300ms ease;
-
-        .info {
-          align-self: end;
-          .projectTitle {
-            font-size: 1.5rem;
-            font-weight: 700;
+          @media (min-width: 768px) {
+            height: 300px;
           }
-        }
 
-        &#grounded {
-          background: #f6c36b;
-          color: #000000;
-        }
-        &#mazeviz {
-          background: #444c88;
-          color: #fdfdfd;
-        }
-        &#postup {
-          background: #e95428;
-          color: #fdfdfd;
-        }
-        &#justacal {
-          background: #ebf4ff;
-          color: #000;
-        }
+          border: 1px solid var(--bg-seconday);
+          border-radius: 10px;
+          padding: 25px;
+          padding-right: 35px;
+          padding-left: 17px;
+          padding-bottom: 15px;
+          margin-bottom: 0.75rem;
 
-        &:hover {
-          transform: scale(1.02);
-          border-color: transparent;
-          cursor: pointer;
+          display: grid;
+          grid-template-rows: 1fr 100px;
+
+          transition: all 300ms ease;
+
+          .info {
+            align-self: end;
+            .projectTitle {
+              font-size: 1.5rem;
+              // padding-bottom: 0.25rem;
+              font-weight: 700;
+            }
+            p {
+              line-height: 20px;
+              font-size: 90%;
+            }
+          }
+
+          &#grounded {
+            background: #f6c36b;
+            color: #000000;
+          }
+          &#mazeviz {
+            background: #444c88;
+            color: #fdfdfd;
+          }
+          &#postup {
+            background: #e95428;
+            color: #fdfdfd;
+          }
+          &#justacal {
+            background: #ebf4ff;
+            color: #000;
+          }
+
+          &:hover {
+            transform: scale(1.02);
+            border-color: transparent;
+            cursor: pointer;
+          }
         }
       }
     }
