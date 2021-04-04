@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from "react"
-import "./_carousel.scss"
 
-const Carousel = ({ count, children }) => {
+const ScrollIndicator = (target, count) => {
   const [scrollProgress, setScrollProgress] = useState(0)
 
-  const scrollListener = e => {
-    if (!e.target) {
+  const scrollListener = () => {
+    if (!target.current) {
       return
     }
 
-    console.log(e.target)
-    const element = e.target
+    console.log("meep")
+    const element = target.current
     const windowScroll = element.scrollLeft // Distance of the scrollbar from the leftmost point
     const totalWidth = element.scrollWidth - element.clientWidth // Total width the scrollbar can traverse
-
-    console.log(windowScroll)
-    console.log(totalWidth)
-
     if (windowScroll === 0) {
       return setScrollProgress(0)
     }
@@ -30,13 +25,22 @@ const Carousel = ({ count, children }) => {
     setScrollProgress((windowScroll / totalWidth) * 100)
   }
 
-  return (
-    <div className="mainContainer">
-      <div className="carouselContainer" onClick={scrollListener}>
-        {children}
-      </div>
-    </div>
-  )
+  useEffect(() => {
+    if (typeof window === `undefined`) {
+      console.log("meep")
+      return
+    }
+
+    console.log("meep3")
+
+
+    target.current && target.current.addEventListener("scroll", scrollListener)
+    return () =>
+      target.current &&
+      target.current.removeEventListener("scroll", scrollListener)
+  }, [target])
+
+  return <div></div>
 }
 
-export default Carousel
+export default ScrollIndicator
