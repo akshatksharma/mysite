@@ -49,13 +49,17 @@ const Home = () => {
     <div className="project filler">
       <h2 className="subtitle"> Design </h2>
       <div className="projectList">
-        <div className="meep"></div>
+        <div className="fillerBox">
+          <p>Coming soon!</p>
+        </div>
       </div>
     </div>,
     <div className="project filler">
       <h2 className="subtitle"> Photography </h2>
       <div className="projectList">
-        <div className="meep"></div>
+        <div className="fillerBox">
+          <p>Coming soon!</p>
+        </div>
       </div>
     </div>,
   ]

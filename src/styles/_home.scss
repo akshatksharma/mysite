@@ -180,15 +180,24 @@
     .projectList {
       height: calc(100% - 85px);
 
-      .meep {
+      .fillerBox {
         height: 100%;
-        background-color: lightcoral;
+        background-color: #a2999e;
 
         border: 1px solid var(--bg-seconday);
         border-radius: 10px;
 
         min-width: 290px;
         max-width: 500px;
+
+        display: grid;
+        place-items: center;
+
+        p {
+          color: black;
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -212,7 +221,7 @@
         grid-template-columns: minmax(250px, 500px);
         grid-auto-rows: auto;
 
-        .meep {
+        .fillerBox {
           border: 1px solid var(--bg-seconday);
           border-radius: 10px;
 
