@@ -36,10 +36,10 @@ const Nav = ({ siteTitle }) => {
             <span className="linkText">About</span>
           </div>
         </button>
-        <button className="navItem" onClick={() => scrollTo("#projects")}>
+        <button className="navItem" onClick={() => scrollTo("#works")}>
           <div className="navLink">
             <Code size="32" />
-            <span className="linkText">Projects</span>
+            <span className="linkText">Work</span>
           </div>
         </button>
         <button className="navItem" onClick={() => scrollTo("#contact")}>

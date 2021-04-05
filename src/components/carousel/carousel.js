@@ -34,13 +34,13 @@ const Carousel = ({ count, content }) => {
       scrollContainer.scrollWidth - scrollContainer.clientWidth
 
     console.log(e.currentTarget.id)
-    if (e.currentTarget.id == 0) {
+    if (e.currentTarget.id === 0) {
       scrollContainer.scrollLeft = 0
     }
-    if (e.currentTarget.id == 1) {
+    if (e.currentTarget.id === 1) {
       scrollRef.current.scrollLeft = 0.4 * scrollDistance
     }
-    if (e.currentTarget.id == 2) {
+    if (e.currentTarget.id === 2) {
       scrollRef.current.scrollLeft = 0.65 * scrollDistance
     }
   }
