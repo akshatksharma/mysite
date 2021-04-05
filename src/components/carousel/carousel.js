@@ -50,7 +50,10 @@ const Carousel = ({ count, content }) => {
       <div className="body">
         <div
           className="mainContainer"
-          style={{ width: `${count * 100 - 40}%` }}
+          style={{
+            maxWidth: `${count * 100 - 40}%`,
+            minWidth: `${(count - 1) * 100}%`,
+          }}
         >
           <div className="carouselContainer">
             {content.map((elem, i) => {
