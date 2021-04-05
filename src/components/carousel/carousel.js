@@ -17,7 +17,6 @@ const Carousel = ({ count, content }) => {
 
     const scrollPos = (windowScroll / totalWidth) * 100
 
-    console.log(scrollPos)
 
     if (scrollPos < 20) setCurrentItem(0)
     else if (scrollPos > 20 && scrollPos < 55) setCurrentItem(1)
