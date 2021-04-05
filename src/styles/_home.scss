@@ -107,6 +107,10 @@
 
     .subtitle {
       margin-bottom: 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .projectList {
@@ -209,7 +213,6 @@
         grid-auto-rows: auto;
 
         .meep {
-
           border: 1px solid var(--bg-seconday);
           border-radius: 10px;
 

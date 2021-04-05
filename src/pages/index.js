@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import SEO from "components/seo"
 import { Link } from "gatsby"
 import Particles from "react-tsparticles"

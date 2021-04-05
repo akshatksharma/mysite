@@ -1,4 +1,5 @@
 .wrapper {
+  scroll-behavior: smooth;
   overflow-x: auto;
 
   &::-webkit-scrollbar {
@@ -27,7 +28,7 @@
 }
 
 .outOfFocus {
-  transform: scale(0.95);
+  transform: scale(0.9);
   filter: grayscale(60%);
   transition: all 600ms ease;
 

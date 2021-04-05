@@ -6,6 +6,12 @@ const Carousel = ({ count, content }) => {
 
   const scrollRef = createRef()
 
+  /**
+   *
+   * {TODO}
+   * need to generalize the scrolling functions to adapt to any amount of items
+   */
+
   const scrollListener = e => {
     if (!e.target) {
       return
@@ -17,10 +23,26 @@ const Carousel = ({ count, content }) => {
 
     const scrollPos = (windowScroll / totalWidth) * 100
 
-
     if (scrollPos < 20) setCurrentItem(0)
-    else if (scrollPos > 20 && scrollPos < 55) setCurrentItem(1)
+    else if (scrollPos > 20 && scrollPos < 60) setCurrentItem(1)
     else if (scrollPos <= 100) setCurrentItem(2)
+  }
+
+  const scrollToItem = e => {
+    const scrollContainer = scrollRef.current
+    const scrollDistance =
+      scrollContainer.scrollWidth - scrollContainer.clientWidth
+
+    console.log(e.currentTarget.id)
+    if (e.currentTarget.id == 0) {
+      scrollContainer.scrollLeft = 0
+    }
+    if (e.currentTarget.id == 1) {
+      scrollRef.current.scrollLeft = 0.4 * scrollDistance
+    }
+    if (e.currentTarget.id == 2) {
+      scrollRef.current.scrollLeft = 0.65 * scrollDistance
+    }
   }
 
   return (
@@ -34,7 +56,12 @@ const Carousel = ({ count, content }) => {
             {content.map((elem, i) => {
               if (i !== currentItem) {
                 return (
-                  <div key={i} className="projectWrapper outOfFocus">
+                  <div
+                    id={i}
+                    key={i}
+                    className="projectWrapper outOfFocus"
+                    onClick={scrollToItem}
+                  >
                     {elem}
                   </div>
                 )
