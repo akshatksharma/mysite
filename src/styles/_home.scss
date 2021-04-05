@@ -98,112 +98,123 @@
     }
   }
 
-  .wrapper {
-    overflow-x: auto;
+  .project {
+    margin-right: 1.5rem;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .body {
-    // overflow-x: auto;
-
-    &::-webkit-scrollbar {
-      display: none;
+    @media (min-width: 768px) {
+      margin-right: 3rem;
     }
 
-    @media (min-width: 640px) {
-      position: relative;
-      width: 85%;
-      left: 15%;
+    .subtitle {
+      margin-bottom: 0.5rem;
     }
 
-    .project {
-      margin-right: 1.5rem;
+    .projectList {
+      .projectBox {
+        width: 100%;
+        height: 150px;
 
-      @media (min-width: 768px) {
-        margin-right: 3rem;
-      }
+        @media (min-width: 768px) {
+          height: 300px;
+        }
 
-      .subtitle {
-        margin-bottom: 0.5rem;
-      }
+        border: 1px solid var(--bg-seconday);
+        border-radius: 10px;
+        padding: 25px;
+        padding-right: 35px;
+        padding-left: 17px;
+        padding-bottom: 15px;
+        margin-bottom: 0.75rem;
 
-      .projectList {
-        .projectBox {
-          width: 100%;
-          height: 150px;
+        display: grid;
+        grid-template-rows: 1fr 100px;
 
-          @media (min-width: 768px) {
-            height: 300px;
+        transition: all 300ms ease;
+
+        .info {
+          align-self: end;
+          .projectTitle {
+            font-size: 1.5rem;
+            // padding-bottom: 0.25rem;
+            font-weight: 700;
           }
-
-          border: 1px solid var(--bg-seconday);
-          border-radius: 10px;
-          padding: 25px;
-          padding-right: 35px;
-          padding-left: 17px;
-          padding-bottom: 15px;
-          margin-bottom: 0.75rem;
-
-          display: grid;
-          grid-template-rows: 1fr 100px;
-
-          transition: all 300ms ease;
-
-          .info {
-            align-self: end;
-            .projectTitle {
-              font-size: 1.5rem;
-              // padding-bottom: 0.25rem;
-              font-weight: 700;
-            }
-            p {
-              line-height: 20px;
-              font-size: 90%;
-            }
+          p {
+            line-height: 20px;
+            font-size: 90%;
           }
+        }
 
-          &#grounded {
-            background: #f6c36b;
-            color: #000000;
-          }
-          &#mazeviz {
-            background: #444c88;
-            color: #fdfdfd;
-          }
-          &#postup {
-            background: #e95428;
-            color: #fdfdfd;
-          }
-          &#justacal {
-            background: #ebf4ff;
-            color: #000;
-          }
+        &#grounded {
+          background: #f6c36b;
+          color: #000000;
+        }
+        &#mazeviz {
+          background: #444c88;
+          color: #fdfdfd;
+        }
+        &#postup {
+          background: #e95428;
+          color: #fdfdfd;
+        }
+        &#justacal {
+          background: #ebf4ff;
+          color: #000;
+        }
 
-          &:hover {
-            transform: scale(1.02);
-            border-color: transparent;
-            cursor: pointer;
-          }
+        &:hover {
+          transform: scale(1.02);
+          border-color: transparent;
+          cursor: pointer;
         }
       }
     }
+  }
 
-    // @media (min-width: 640px) {
-    //   width: 66%;
-    // }
+  .project.filler {
+    height: 100%;
 
-    @media (min-width: 768px) {
+    .projectList {
+      height: calc(100% - 85px);
+
+      .meep {
+        height: 100%;
+        background-color: lightcoral;
+
+        border: 1px solid var(--bg-seconday);
+        border-radius: 10px;
+
+        min-width: 290px;
+        max-width: 500px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .projectList {
+      display: grid;
+      grid-gap: 1rem 1rem;
+      grid-template-columns: minmax(250px, 500px) minmax(250px, 500px);
+      grid-auto-rows: 300px;
+
+      .projectBox {
+        height: 100%;
+      }
+    }
+
+    .project.filler {
+      height: 100%;
+
       .projectList {
-        display: grid;
-        grid-gap: 1rem 1rem;
-        grid-template-columns: minmax(250px, 500px) minmax(250px, 500px);
-        grid-auto-rows: 300px;
+        grid-template-columns: minmax(250px, 500px);
+        grid-auto-rows: auto;
 
-        .projectBox {
-          height: 100%;
+        .meep {
+
+          border: 1px solid var(--bg-seconday);
+          border-radius: 10px;
+
+          min-width: auto;
+          max-width: none;
         }
       }
     }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import SEO from "components/seo"
 import { Link } from "gatsby"
 import Particles from "react-tsparticles"
@@ -12,6 +12,54 @@ import "styles/_home.scss"
 import profile from "images/circleface.png"
 
 const Home = () => {
+  const carouselContent = [
+    <div className="project">
+      <h2 className="subtitle"> CS </h2>
+      <div className="projectList">
+        <Link to="/grounded" className="projectBox" id="grounded">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">Grounded</h2>
+            <p>Document your stories during the COVID-19 pandemic.</p>
+          </div>
+        </Link>
+        <Link to="/mazeviz" className="projectBox" id="mazeviz">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">MazeViz</h2>
+            <p>Create beautiful mazes and solve them.</p>
+          </div>
+        </Link>
+        <Link to="/justacal" className="projectBox" id="justacal">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">Just a cal</h2>
+            <p>Google calendar clone with event grouping features.</p>
+          </div>
+        </Link>
+        <Link to="/postup" className="projectBox" id="postup">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">Postup</h2>
+            <p>Reddit clone with inline replies and editing.</p>
+          </div>
+        </Link>
+      </div>
+    </div>,
+    <div className="project filler">
+      <h2 className="subtitle"> Design </h2>
+      <div className="projectList">
+        <div className="meep"></div>
+      </div>
+    </div>,
+    <div className="project filler">
+      <h2 className="subtitle"> Photography </h2>
+      <div className="projectList">
+        <div className="meep"></div>
+      </div>
+    </div>,
+  ]
+
   return (
     <Layout isHome={true}>
       <SEO title="Home" />
@@ -72,113 +120,9 @@ const Home = () => {
       </section>
       <section className="sectionContent" id="projects">
         <div className="header">
-          <h1 className="title">Projects</h1>
+          <h1 className="title">Work</h1>
         </div>
-        <div className="wrapper">
-          <div className="body">
-            <Carousel>
-              <div className="project">
-                <h2 className="subtitle"> CS </h2>
-                <div className="projectList">
-                  <Link to="/grounded" className="projectBox" id="grounded">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Grounded</h2>
-                      <p>Document your stories during the COVID-19 pandemic.</p>
-                    </div>
-                  </Link>
-                  <Link to="/mazeviz" className="projectBox" id="mazeviz">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">MazeViz</h2>
-                      <p>Create beautiful mazes and solve them.</p>
-                    </div>
-                  </Link>
-                  <Link to="/justacal" className="projectBox" id="justacal">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Just a cal</h2>
-                      <p>Google calendar clone with event grouping features.</p>
-                    </div>
-                  </Link>
-                  <Link to="/postup" className="projectBox" id="postup">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Postup</h2>
-                      <p>Reddit clone with inline replies and editing.</p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="project">
-                <h2 className="subtitle"> Design </h2>
-                <div className="projectList">
-                  <Link to="/grounded" className="projectBox" id="grounded">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Grounded</h2>
-                      <p>Document your stories during the COVID-19 pandemic.</p>
-                    </div>
-                  </Link>
-                  <Link to="/mazeviz" className="projectBox" id="mazeviz">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">MazeViz</h2>
-                      <p>Create beautiful mazes and solve them.</p>
-                    </div>
-                  </Link>
-                  <Link to="/justacal" className="projectBox" id="justacal">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Just a cal</h2>
-                      <p>Google calendar clone with event grouping features.</p>
-                    </div>
-                  </Link>
-                  <Link to="/postup" className="projectBox" id="postup">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Postup</h2>
-                      <p>Reddit clone with inline replies and editing.</p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="project">
-                <h2 className="subtitle"> Photo </h2>
-                <div className="projectList">
-                  <Link to="/grounded" className="projectBox" id="grounded">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Grounded</h2>
-                      <p>Document your stories during the COVID-19 pandemic.</p>
-                    </div>
-                  </Link>
-                  <Link to="/mazeviz" className="projectBox" id="mazeviz">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">MazeViz</h2>
-                      <p>Create beautiful mazes and solve them.</p>
-                    </div>
-                  </Link>
-                  <Link to="/justacal" className="projectBox" id="justacal">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Just a cal</h2>
-                      <p>Google calendar clone with event grouping features.</p>
-                    </div>
-                  </Link>
-                  <Link to="/postup" className="projectBox" id="postup">
-                    <div className="graphic"></div>
-                    <div className="info">
-                      <h2 className="projectTitle">Postup</h2>
-                      <p>Reddit clone with inline replies and editing.</p>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </Carousel>
-          </div>
-        </div>
+        <Carousel count={3} content={carouselContent}></Carousel>
       </section>
     </Layout>
   )
