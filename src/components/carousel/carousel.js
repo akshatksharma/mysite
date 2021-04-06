@@ -51,13 +51,7 @@ const Carousel = ({ count, content }) => {
   return (
     <div className="wrapper" onScroll={scrollListener} ref={scrollRef}>
       <div className="body">
-        <div
-          className="mainContainer"
-          style={{
-            maxWidth: `${count * 100 - 40}%`,
-            minWidth: `${(count - 1) * 100}%`,
-          }}
-        >
+        <div className="mainContainer">
           <div className="carouselContainer">
             {content.map((elem, i) => {
               if (i !== currentItem) {
