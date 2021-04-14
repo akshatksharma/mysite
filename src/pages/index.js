@@ -72,7 +72,7 @@ const Home = () => {
         id="tsparticles"
         options={config.light}
         width="100vw"
-        height="125vh"
+        height="115vh"
         canvasClassName="particles"
       />
       <section className="sectionContent" id="home">

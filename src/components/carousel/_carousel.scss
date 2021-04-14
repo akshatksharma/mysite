@@ -1,3 +1,49 @@
+.mainContainer {
+  display: flex;
+  position: relative;
+
+  &:hover .carouselButton {
+    @media (min-width: 768px) {
+      transform: scale(1);
+    }
+  }
+}
+
+.carouselButton {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+
+    font-size: 150%;
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+
+    transform: scale(0);
+    transition: all 300ms ease;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px var(--text-primary) solid;
+  }
+}
+
+.carouselButton--left {
+  @media (min-width: 768px) {
+    left: 1rem;
+  }
+}
+.carouselButton--right {
+  @media (min-width: 768px) {
+    right: 1rem;
+  }
+}
+
 .wrapper {
   scroll-behavior: smooth;
   overflow-x: auto;
@@ -13,14 +59,14 @@
       left: 15%;
     }
 
-    .mainContainer {
+    .carouselContainer {
       width: 260%;
 
       @media (min-width: 640px) {
         width: 200%;
       }
 
-      .carouselContainer {
+      .carousel {
         display: flex;
         flex-direction: row;
         width: 100%;

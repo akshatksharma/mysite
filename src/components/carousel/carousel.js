@@ -28,53 +28,61 @@ const Carousel = ({ count, content }) => {
     else if (scrollPos <= 100) setCurrentItem(2)
   }
 
-  const scrollToItem = e => {
+  const incrementScroll = e => {
     const scrollContainer = scrollRef.current
-    const scrollDistance =
-      scrollContainer.scrollWidth - scrollContainer.clientWidth
+    const totalWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth
 
-    console.log(e.currentTarget.id)
-    if (e.currentTarget.id === "0") {
-      console.log("meep0")
-      scrollContainer.scrollLeft = 0
-    }
-    if (e.currentTarget.id === "1") {
-      console.log("meep1")
-      scrollRef.current.scrollLeft = 0.4 * scrollDistance
-    }
-    if (e.currentTarget.id === "2") {
-      console.log("meep2")
-      scrollRef.current.scrollLeft = 0.65 * scrollDistance
-    }
+    scrollContainer.scrollLeft += 0.5 * totalWidth
+  }
+
+  const decrementScroll = e => {
+    const scrollContainer = scrollRef.current
+    const totalWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth
+
+    scrollContainer.scrollLeft -= 0.5 * totalWidth
   }
 
   return (
-    <div className="wrapper" onScroll={scrollListener} ref={scrollRef}>
-      <div className="body">
-        <div className="mainContainer">
+    <div className="mainContainer">
+      <button
+        onClick={decrementScroll}
+        className="carouselButton carouselButton--left"
+      >
+        {"<"}
+      </button>
+      <div
+        id="scrollWrapper"
+        className="wrapper"
+        onScroll={scrollListener}
+        ref={scrollRef}
+      >
+        <div className="body">
           <div className="carouselContainer">
-            {content.map((elem, i) => {
-              if (i !== currentItem) {
+            <div className="carousel">
+              {content.map((elem, i) => {
+                if (i !== currentItem) {
+                  return (
+                    <div id={i} key={i} className="projectWrapper outOfFocus">
+                      {elem}
+                    </div>
+                  )
+                }
                 return (
-                  <div
-                    id={i}
-                    key={i}
-                    className="projectWrapper outOfFocus"
-                    onClick={scrollToItem}
-                  >
+                  <div key={i} className="projectWrapper">
                     {elem}
                   </div>
                 )
-              }
-              return (
-                <div key={i} className="projectWrapper">
-                  {elem}
-                </div>
-              )
-            })}
+              })}
+            </div>
           </div>
         </div>
       </div>
+      <button
+        onClick={incrementScroll}
+        className="carouselButton carouselButton--right"
+      >
+        {">"}
+      </button>
     </div>
   )
 }
