@@ -19,6 +19,8 @@
 
     font-size: 150%;
     background-color: var(--bg-primary);
+    border: 1px var(--bg-secondary) solid;
+
     border-radius: 50%;
     height: 3.5rem;
     width: 3.5rem;
@@ -29,7 +31,7 @@
 
   &:focus {
     outline: none;
-    border: 2px var(--text-primary) solid;
+    border: 2px var(--bg-secondary) solid;
   }
 }
 
