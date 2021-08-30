@@ -9,8 +9,11 @@ const Mazeviz = () => (
   <Layout isHome={false}>
     <SEO title="Grounded" />
     <main className="projectPage">
-      <header className="titleHeader" style={{ color: "#444c88" }}>
-        <h1 className="title">MazeViz</h1>
+      <header className="titleHeader" style={{ color: "#EE6E72" }}>
+        <div>
+          <h1 className="title">MazeViz</h1>
+          <p>Create beautiful mazes and solve them.</p>
+        </div>
       </header>
       <section className="content">
         <div className="mainText">

@@ -22,7 +22,7 @@ const Pagenav = ({ siteTitle }) => {
   }, [scrollTop])
 
   return (
-    <nav className={scrolling ? "navBar hidden" : "navBar"}>
+    <nav className="navBar">
       <div className="nav pageNav">
         <button className="navItem">
           <Link to="/" className="navLink">

@@ -24,22 +24,21 @@ const Carousel = ({ count, content }) => {
     const scrollPos = (windowScroll / totalWidth) * 100
 
     if (scrollPos < 20) setCurrentItem(0)
-    else if (scrollPos > 20 && scrollPos < 60) setCurrentItem(1)
-    else if (scrollPos <= 100) setCurrentItem(2)
+    else setCurrentItem(1)
   }
 
   const incrementScroll = e => {
     const scrollContainer = scrollRef.current
     const totalWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth
 
-    scrollContainer.scrollLeft += 0.5 * totalWidth
+    scrollContainer.scrollLeft += totalWidth
   }
 
   const decrementScroll = e => {
     const scrollContainer = scrollRef.current
     const totalWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth
 
-    scrollContainer.scrollLeft -= 0.5 * totalWidth
+    scrollContainer.scrollLeft -= totalWidth
   }
 
   return (

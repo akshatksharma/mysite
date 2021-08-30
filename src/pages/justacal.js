@@ -10,7 +10,10 @@ const Justacal = () => (
     <SEO title="Sunshine" />
     <main className="projectPage">
       <header className="titleHeader" style={{ color: "#b0c7e3" }}>
-        <h1 className="title">Just a Cal</h1>
+        <div>
+          <h1 className="title">Just a Cal</h1>
+          <p>Google calendar clone with event grouping features.</p>
+        </div>
       </header>
       <section className="content">
         <div className="mainText">

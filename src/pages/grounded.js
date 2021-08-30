@@ -10,7 +10,10 @@ const Grounded = () => (
     <SEO title="Grounded" />
     <main className="projectPage">
       <header className="titleHeader" style={{ color: "#f6c36b" }}>
-        <h1 className="title">Grounded</h1>
+        <div>
+          <h1 className="title">Grounded</h1>
+          <p>Document your stories during the COVID-19 pandemic.</p>
+        </div>
       </header>
       <section className="content">
         <div className="mainText">

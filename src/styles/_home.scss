@@ -116,10 +116,12 @@
     .projectList {
       .projectBox {
         width: 100%;
+        max-width: 290px;
         height: 150px;
 
         @media (min-width: 768px) {
           height: 300px;
+          max-width: none;
         }
 
         border: 1px solid var(--bg-seconday);
@@ -148,16 +150,33 @@
           }
         }
 
+        &#webstac {
+          background: #fa8f89;
+          color: #fdfdfd;
+        }
+        &#skilltree {
+          background-color: #b5e7c0;
+          color: #000;
+        }
+        &#faithringgold {
+          background-color: #f0e0a0;
+          color: #000;
+        }
+        &#mechmarket {
+          background-color: #c5daae;
+          color: #000;
+        }
+
         &#grounded {
           background: #f6c36b;
           color: #000000;
         }
         &#mazeviz {
-          background: #444c88;
+          background: #ee6e72;
           color: #fdfdfd;
         }
-        &#postup {
-          background: #e95428;
+        &#quizlet {
+          background: #4257b2;
           color: #fdfdfd;
         }
         &#justacal {

@@ -22,7 +22,7 @@ const Nav = ({ siteTitle }) => {
   }, [scrollTop])
 
   return (
-    <nav className={scrolling ? "navBar hidden" : "navBar"}>
+    <nav className="navBar">
       <div className="nav">
         <button className="navItem" onClick={() => scrollTo("#home")}>
           <div className="navLink">

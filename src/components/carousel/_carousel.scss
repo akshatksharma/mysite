@@ -49,6 +49,7 @@
 .wrapper {
   scroll-behavior: smooth;
   overflow-x: auto;
+  width: 100%;
 
   &::-webkit-scrollbar {
     display: none;
@@ -57,12 +58,12 @@
   .body {
     @media (min-width: 640px) {
       position: relative;
-      width: 85%;
+      width: 65%;
       left: 15%;
     }
 
     .carouselContainer {
-      width: 260%;
+      width: 200%;
 
       @media (min-width: 640px) {
         width: 200%;
@@ -81,6 +82,7 @@
   display: flex;
   transform: scale(1);
   transition: all 600ms ease;
+  padding-bottom: 1rem;
 }
 
 .outOfFocus {
