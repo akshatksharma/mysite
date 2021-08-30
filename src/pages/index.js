@@ -59,7 +59,7 @@ const Home = () => {
         <Link to="/faithringgold" className="projectBox" id="faithringgold">
           <div className="graphic"></div>
           <div className="info">
-            <h2 className="projectTitle">Faith Ringgold Gallery</h2>
+            <h2 className="projectTitle">Ringgold Redesign</h2>
             <p>
               Redesigning a site for one of the most prolific artist activists
             </p>

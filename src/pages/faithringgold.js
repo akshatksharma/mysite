@@ -10,7 +10,7 @@ const FaithRinggold = () => (
     <main className="projectPage">
       <header className="titleHeader" style={{ color: "#7A726A" }}>
         <div>
-          <h1 className="title">Faith Ringgold</h1>
+          <h1 className="title">Faith Ringgold Redesign</h1>
           <p>
             Designing a site for one of the most prolific artist activists of
             our time
