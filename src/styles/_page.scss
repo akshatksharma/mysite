@@ -33,11 +33,18 @@
       grid-template-columns: 0.5fr 3fr 1fr 1fr;
 
       margin-top: 3rem;
-      padding: 40px 80px;
+      padding: 32px 80px;
 
-      h1 {
-        font-size: 6rem;
-        grid-column: 2 / 3;
+      div {
+        grid-column: 2 / 4;
+
+        h1 {
+          font-size: 6rem;
+        }
+        p {
+          margin-left: 0.7rem;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -85,12 +92,41 @@
       }
     }
 
+    .figma-container {
+      position: relative;
+      padding-top: 34px;
+      height: 0;
+      overflow: hidden;
+
+      &.figma-container--faithringgold,
+      &.figma-container--mechmarket {
+        padding-bottom: 69.11%;
+      }
+
+      &.figma-container--webstac {
+        padding-bottom: 55%;
+      }
+
+      &.figma-container--skilltree {
+        padding-bottom: 64.29%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     @media (min-width: 768px) {
       & {
         display: grid;
         grid-template-columns: 0.5fr 3fr 1fr 1fr;
         column-gap: 2rem;
         padding-top: 2rem;
+        padding-bottom: 4rem;
 
         .mainText {
           grid-column: 2 / 3;
@@ -107,6 +143,11 @@
 
           & > div {
           }
+        }
+
+        .figma-container {
+          grid-column: 2 / 4;
+          margin-left: 3rem;
         }
       }
     }

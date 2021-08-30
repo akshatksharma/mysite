@@ -14,8 +14,15 @@ import profile from "images/circleface.png"
 const Home = () => {
   const carouselContent = [
     <div className="project">
-      <h2 className="subtitle"> CS </h2>
+      <h2 className="subtitle"> Computer Science </h2>
       <div className="projectList">
+        <Link to="/quizlet" className="projectBox" id="quizlet">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">Quizlet</h2>
+            <p>Learn it. Own it. Quizlet.</p>
+          </div>
+        </Link>
         <Link to="/grounded" className="projectBox" id="grounded">
           <div className="graphic"></div>
           <div className="info">
@@ -37,29 +44,41 @@ const Home = () => {
             <p>Google calendar clone with event grouping features.</p>
           </div>
         </Link>
-        <Link to="/postup" className="projectBox" id="postup">
-          <div className="graphic"></div>
-          <div className="info">
-            <h2 className="projectTitle">Postup</h2>
-            <p>Reddit clone with inline replies and editing.</p>
-          </div>
-        </Link>
       </div>
     </div>,
-    <div className="project filler">
+    <div className="project">
       <h2 className="subtitle"> Design </h2>
       <div className="projectList">
-        <div className="fillerBox">
-          <p>Coming soon!</p>
-        </div>
-      </div>
-    </div>,
-    <div className="project filler">
-      <h2 className="subtitle"> Photography </h2>
-      <div className="projectList">
-        <div className="fillerBox">
-          <p>Coming soon!</p>
-        </div>
+        <Link to="/webstac" className="projectBox" id="webstac">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">WebSTAC Redesign</h2>
+            <p>Learning why course selection sucks</p>
+          </div>
+        </Link>
+        <Link to="/faithringgold" className="projectBox" id="faithringgold">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">Faith Ringgold Gallery</h2>
+            <p>
+              Redesigning a site for one of the most prolific artist activists
+            </p>
+          </div>
+        </Link>
+        <Link to="/skilltree" className="projectBox" id="skilltree">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">SkillTree</h2>
+            <p>A new way for people to build new skills</p>
+          </div>
+        </Link>
+        <Link to="/mechmarket" className="projectBox" id="mechmarket">
+          <div className="graphic"></div>
+          <div className="info">
+            <h2 className="projectTitle">MechMarket</h2>
+            <p>A mobile marketplace for everything mechanical keyboard</p>
+          </div>
+        </Link>
       </div>
     </div>,
   ]
@@ -78,7 +97,7 @@ const Home = () => {
       <section className="sectionContent" id="home">
         <div className="header">
           <h1 className="hero">
-            Hello, <br /> I'm Akshat Sharma.
+            Hi! <br /> I'm Akshat Sharma.
             {/* adjust line spacing */}
           </h1>
           <h2 className="title--smol">
@@ -100,8 +119,7 @@ const Home = () => {
             />
           </div>
           <p className="text">
-            Hi! My name is Akshat Sharma. I’m a junior studying CS, Biology, and
-            Human-Computer Interaction.
+            I’m a junior studying CS, Biology, and Human-Computer Interaction.
             <br />
             <br />
             Programming is an outlet to make ideas come to *
@@ -126,7 +144,7 @@ const Home = () => {
         <div className="header">
           <h1 className="title">Work</h1>
         </div>
-        <Carousel count={3} content={carouselContent}></Carousel>
+        <Carousel count={2} content={carouselContent}></Carousel>
       </section>
     </Layout>
   )
