@@ -8,7 +8,7 @@ const SkillTree = () => (
   <Layout isHome={false}>
     <SEO title="Postup" />
     <main className="projectPage">
-      <header className="titleHeader" style={{ color: "#c6e1cc" }}>
+      <header className="titleHeader" style={{ color: "#a0ccaa" }}>
         <div>
           <h1 className="title">SkillTree</h1>
           <p>A new way for people to build new skills</p>

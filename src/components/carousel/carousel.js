@@ -31,14 +31,14 @@ const Carousel = ({ count, content }) => {
     const scrollContainer = scrollRef.current
     const totalWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth
 
-    scrollContainer.scrollLeft += 0.75 * totalWidth
+    scrollContainer.scrollLeft += totalWidth
   }
 
   const decrementScroll = e => {
     const scrollContainer = scrollRef.current
     const totalWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth
 
-    scrollContainer.scrollLeft -= 0.75 * totalWidth
+    scrollContainer.scrollLeft -= totalWidth
   }
 
   return (

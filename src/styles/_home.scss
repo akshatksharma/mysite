@@ -121,6 +121,7 @@
 
         @media (min-width: 768px) {
           height: 300px;
+          max-width: none;
         }
 
         border: 1px solid var(--bg-seconday);
@@ -154,15 +155,15 @@
           color: #fdfdfd;
         }
         &#skilltree {
-          background-color: #c6e1cc;
+          background-color: #b5e7c0;
           color: #000;
         }
         &#faithringgold {
-          background-color: #eae3c6;
+          background-color: #f0e0a0;
           color: #000;
         }
         &#mechmarket {
-          background-color: #c7cbc2;
+          background-color: #c5daae;
           color: #000;
         }
 
